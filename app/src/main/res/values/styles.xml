@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="small_fare_">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">#EEEEEE</item>
+    </style>
+    <style name="powered_by">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#EEEEEE</item>
+    </style>
+</resources>
