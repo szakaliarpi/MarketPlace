@@ -1,1 +1,1 @@
-# FitnessWPF
+# Szakáli-Vándor Árpád

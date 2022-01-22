@@ -1,5 +1,34 @@
 <resources>
-    <string name="app_name">Market Place</string>
+    <string name="app_name">Bazaar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="small_fare_">Small Fare - Big Life</string>
-    <string name="powered_by">POWERED BY</string>
+    <string name="powered_by">Powered by</string>
+    <string name="azaar">azaar</string>
+
+    <string-array name="spinner_mode">
+        <item>Time</item>
+        <item>Seller</item>
+        <item>Product</item>
+    </string-array>
+
+    <string-array name="price_amount_array">
+        <item>RON</item>
+        <item>EUR</item>
+        <item>HUF</item>
+    </string-array>
+
+    <string-array name="available_amount_array">
+        <item>L</item>
+        <item>Kg</item>
+        <item>Db</item>
+    </string-array>
+
+    <string-array name="order_options_array">
+        <item>Incoming</item>
+        <item>Accepted</item>
+        <item>Declined</item>
+        <item>Delivering</item>
+        <item>Delivered</item>
+    </string-array>
+
 </resources>

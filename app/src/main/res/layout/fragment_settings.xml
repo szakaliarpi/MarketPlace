@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SettingsFragment"
+    android:background="@color/dark"
+    android:clickable="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/appBarColor"
+            android:minHeight="70dp"
+            android:theme="@style/AppTheme"
+            app:title="Settings"
+            app:titleTextColor="@color/white">
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_civ"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/ic_settings_appbar"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/profile_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/B_white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image_civ" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginRight="56dp"
+                android:hint="Email"
+                style="@style/LoginTextInputLayout"
+                app:boxStrokeColor="@color/selector_edit_text_border_login"
+                app:endIconDrawable="@drawable/ic_eye"
+                app:endIconMode="custom"
+                app:endIconTint="@color/selector_icon_input_layout_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_name_tv">
+
+                <EditText
+                    android:id="@+id/email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:theme="@style/EditTextCreateLogin"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginRight="56dp"
+                android:hint="Username"
+                style="@style/LoginTextInputLayout"
+                app:boxStrokeColor="@color/selector_edit_text_border_login"
+                app:endIconDrawable="@drawable/ic_eye"
+                app:endIconMode="custom"
+                app:endIconTint="@color/selector_icon_input_layout_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_til">
+
+                <EditText
+                    android:id="@+id/username_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:theme="@style/EditTextCreateLogin"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginRight="56dp"
+                android:hint="Phone number"
+                style="@style/LoginTextInputLayout"
+                app:boxStrokeColor="@color/selector_edit_text_border_login"
+                app:endIconDrawable="@drawable/ic_eye"
+                app:endIconMode="custom"
+                app:endIconTint="@color/selector_icon_input_layout_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/username_til">
+
+                <EditText
+                    android:id="@+id/phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:theme="@style/EditTextCreateLogin"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/publish_btn"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginRight="56dp"
+                android:layout_marginBottom="150dp"
+                android:background="@drawable/login_btn_bg"
+                android:text="Publish"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_til" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

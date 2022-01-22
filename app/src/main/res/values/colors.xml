@@ -7,4 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="B_white">#EEEEEE</color>
+    <color name="light_blue">#00B5C0</color>
+    <color name="B_black">#212121</color>
+    <color name="B_black_op50">#50212121</color>
+    <color name="B_white_cc">#CCCCCC</color>
+    <color name="transparent">#00000000 </color>
+    <color name="B_white_op50">#50EEEEEE</color>
+    <color name="red">#FF0000</color>
+    <color name="appBarColor">#212121</color>
+    <color name="dark">#161616</color>
+    <color name="light_gray">#9A9A9A</color>
+    <color name="B_turqoise">#00B5C0</color>
+    <color name="bazaar_green">#00B5C0</color>
+
+
 </resources>
