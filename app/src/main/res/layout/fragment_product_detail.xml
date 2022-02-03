@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/B_white"
+    android:clickable="true"
+    tools:context=".fragments.ProductDetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/appBarColor"
+            android:minHeight="70dp"
+            android:theme="@style/AppTheme"
+            app:title="Product detail"
+            app:titleTextColor="@color/white">
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/product_im"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:src="@color/light_blue"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/product_image_civ"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_eye"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_im" />
+
+    <TextView
+        android:id="@+id/profile_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="Cameron Williamson"
+        app:layout_constraintBottom_toBottomOf="@+id/product_image_civ"
+        app:layout_constraintStart_toEndOf="@+id/product_image_civ"
+        app:layout_constraintTop_toTopOf="@+id/product_image_civ" />
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="12.08.2020"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_name_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_name_tv" />
+
+
+    <ImageView
+        android:id="@+id/edit_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/inactive_tv"
+        app:layout_constraintEnd_toEndOf="@+id/date_tv"
+        app:layout_constraintTop_toBottomOf="@+id/date_tv" />
+
+    <TextView
+        android:id="@+id/product_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="P{álinka} de prune"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/product_image_civ"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name_tv" />
+
+    <TextView
+        android:id="@+id/product_price_per_quantity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="45 Ron/L"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="@+id/product_image_civ"
+        app:layout_constraintTop_toBottomOf="@+id/product_name_tv" />
+
+    <TextView
+        android:id="@+id/available_amount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available amount: 2L"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/product_price_per_quantity_tv"
+        app:layout_constraintTop_toBottomOf="@+id/product_price_per_quantity_tv" />
+
+    <TextView
+        android:id="@+id/rate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Rate this fare, click on the stars above  "
+        android:textColor="@color/B_black_op50"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/available_amount_tv"
+        app:layout_constraintTop_toBottomOf="@+id/available_amount_tv" />
+
+    <ImageView
+        android:id="@+id/inactive_im"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_inactive"
+        app:layout_constraintBottom_toBottomOf="@+id/inactive_tv"
+        app:layout_constraintEnd_toStartOf="@+id/inactive_tv"
+        app:layout_constraintTop_toTopOf="@+id/inactive_tv" />
+
+    <TextView
+        android:id="@+id/inactive_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inactive"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/product_price_per_quantity_tv"
+        app:layout_constraintEnd_toEndOf="@+id/date_tv"
+        app:layout_constraintTop_toTopOf="@+id/product_price_per_quantity_tv" />
+
+    <TextView
+        android:id="@+id/description_tv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:scrollbars="vertical"
+        android:text="Palinka din prune alese, facuta cu drag dupa o reteta de familie. S-au folosit cele mai bune si frumoase prune, culese din livezi din Transilvania"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rate_tv" />
+
+    <TextView
+        android:id="@+id/total_quantity_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ic_ellipse"
+        android:gravity="center"
+        android:text="2 L."
+        android:textColor="@color/light_blue"
+        app:layout_constraintEnd_toStartOf="@+id/price_et"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_tv" />
+
+    <TextView
+        android:id="@+id/total_quantity_title_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Total items"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/total_quantity_et"
+        app:layout_constraintStart_toStartOf="@+id/total_quantity_et"
+        app:layout_constraintTop_toBottomOf="@+id/total_quantity_et" />
+
+    <TextView
+        android:id="@+id/price_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipse"
+        android:gravity="center"
+        android:text="45 Ron"
+        android:textColor="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/total_quantity_et"
+        app:layout_constraintEnd_toStartOf="@+id/sold_quantity_et"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/total_quantity_et"
+        app:layout_constraintTop_toTopOf="@+id/total_quantity_et" />
+
+    <TextView
+        android:id="@+id/price_title_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Price/item"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/price_et"
+        app:layout_constraintStart_toStartOf="@+id/price_et"
+        app:layout_constraintTop_toBottomOf="@+id/price_et" />
+
+    <TextView
+        android:id="@+id/sold_quantity_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipse"
+        android:gravity="center"
+        android:text="18 L."
+        android:textColor="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/price_et"
+        app:layout_constraintEnd_toStartOf="@+id/revenue_et"
+        app:layout_constraintStart_toEndOf="@+id/price_et"
+        app:layout_constraintTop_toTopOf="@+id/price_et" />
+
+    <TextView
+        android:id="@+id/sold_quantity_title_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Selled items"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/sold_quantity_et"
+        app:layout_constraintStart_toStartOf="@+id/sold_quantity_et"
+        app:layout_constraintTop_toBottomOf="@+id/sold_quantity_et" />
+
+    <TextView
+        android:id="@+id/revenue_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipse"
+        android:gravity="center"
+        android:text="810Ron"
+        android:textColor="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/sold_quantity_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sold_quantity_et"
+        app:layout_constraintTop_toTopOf="@+id/sold_quantity_et" />
+
+    <TextView
+        android:id="@+id/revenue_title_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Reveneu"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/revenue_et"
+        app:layout_constraintStart_toStartOf="@+id/revenue_et"
+        app:layout_constraintTop_toBottomOf="@+id/revenue_et" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mail_civ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="86dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_mail_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cart_civ"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/phone_civ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="86dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_phone_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cart_civ" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cart_civ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="86dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_cart_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/phone_civ"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mail_civ" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

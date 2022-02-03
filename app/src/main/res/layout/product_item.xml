@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:elevation="8dp"
+    android:background="@drawable/dummybg"
+    android:padding="4dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/product_image_civ"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_eye"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/product_price_per_quantity_tv"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="25 Ron/L"
+        android:scrollbars = "vertical"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/product_image_civ"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/product_image_civ"
+        app:layout_constraintTop_toBottomOf="@+id/product_image_civ" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_civ"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_settings_appbar"
+        android:clickable="true"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toEndOf="@+id/product_image_civ"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/profile_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="Kristina Watson"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_image_civ"
+        app:layout_constraintStart_toEndOf="@+id/profile_image_civ"
+        app:layout_constraintTop_toTopOf="@+id/profile_image_civ"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/product_name_tv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="P{alinka} de prune "
+        android:textSize="16sp"
+        android:textColor="@color/B_black"
+        app:layout_constraintStart_toStartOf="@+id/profile_image_civ"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name_tv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/order_now_btn"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/order_now_btn_bg"
+        android:drawableStart="@drawable/ic_my_market"
+        android:drawableLeft="@drawable/ic_my_market"
+        android:gravity="center"
+        android:paddingLeft="14dp"
+        android:text="Order Now"
+        android:textAllCaps="false"
+        android:textColor="@color/B_white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile_name_tv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_image_civ"
+        app:layout_constraintTop_toBottomOf="@+id/product_name_tv"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <LinearLayout
+        android:id="@+id/ai_ll"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile_name_tv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_image_civ"
+        app:layout_constraintTop_toBottomOf="@+id/product_name_tv"
+        app:layout_constraintVertical_bias="0.019"
+        android:visibility="gone"
+        android:layout_marginTop="14dp"
+        android:gravity="start">
+
+        <ImageView
+            android:id="@+id/check_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_checkmark"
+            android:layout_marginRight="5dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/ai_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/B_turqoise"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="Active"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
